@@ -1,17 +1,9 @@
 # Spring Boot and React To-Do App
 
-### Summary
-This is yet another to-do app. Like the other _-probably-_ millions of similar to-do apps on the Internet, this app can be used for keeping track of your tasks.
-Allows you to create tasks on its simple and clean interface. You can also mark the tasks as completed or delete them.
-This was a Spring Boot starter project for me.
+Este é um projeto SpringTodoApp que consiste em uma aplicação web para gerenciamento de tarefas (to-do list), com um backend construído em Java Spring e um frontend desenvolvido em React. Na pasta docs, terá o arquivo para o teste de cada endpoint da aplicação via postmann.
 
-### Özet
-Bu, bir başka yapılacaklar listesi uygulaması. İnternet'teki diğer _-muhtemelen-_ milyonlarca benzer yapılacaklar listesi uygulaması gibi bu uygulama da görevlerinizi takip etmek için kullanılabilir.
-Basit ve temiz arayüzü ile görevler oluşturmanıza izin verir. Görevleri tamamlandı olarak işaretleyebilir veya silebilirsiniz.
-Benim için Spring Boot'a başlangıç projesiydi.
+### Tecnologias
 
-
-### Technologies
 - JDK 17
 - Spring Boot with Maven
 - Swagger
@@ -22,58 +14,58 @@ Benim için Spring Boot'a başlangıç projesiydi.
 - TypeScript
 - Docker
 
-### Preview
+## Video da aplicação funcionando
+
 https://github.com/ahmethakanbesel/spring-react-todo-app/assets/6422460/27e2f6c2-31e7-4e18-b955-fc9f33b062f8
 
-### Running
+## Requerimentos
 
-##### Backend
+Para instalar a aplicação, algumas tecnologias são requeridas como:
 
-Firstly, you need to initialize a PostgreSQL database. You can do that with Docker:
-```shell
-docker run --name postgres -e POSTGRES_PASSWORD=secret POSTGRES_USER=myuser -p 5432:5432 -d postgres
+Docker
+Docker Compose
+
+## Instalação
+
+Para instalar a aplicação, siga esses passos:
+
+- Clone o repositorio do GitHub:
+
+```shel
+  git clone https://github.com/GabrielMorais2/spring-react-todo-app-master
 ```
 
-After initializing the database, you need to set the database credentials in the `/src/main/resources/application.properties` file.
+- Navegue até o diretorio da aplicação:
 
-Then, you can run the backend with the following command:
-
-```shell
-mvn spring-boot:run
+```shel
+  cd spring-react-todo-app-master
 ```
 
-##### Frontend
+- Execute o docker compose para instalar iniciar a aplicação:
 
-Initially, create a copy of `.env.example` file and rename it to `.env`.
-Then, you need to fill the required fields for configuring the backend connection.
-You can leave the `VITE_API_URL` field as it is, if you are running the backend on the same machine.
-After that, you can run the frontend with the following commands:
-
-```shell
-bun install
-bun run dev
+```shel
+  docker-compose -d up
 ```
 
-> `bun` is used during the development of this app but the commands above can be replaced with `npm`, `yarn` or `pnpm`.
+A aplicação estará disponivel em http://localhost:3000/ pelo frontend com React.
 
-### Deployment
+## Para uso da API
 
-The app can be deployed with Docker by default.
-At the beginning, build the backend `.jar` file with the following command:
+A API oferece endpoints para realizar operações CRUD (Create, Read, Update, Delete) em tarefas. Abaixo estão os principais endpoints disponíveis:
 
-```shell
-mvn clean install
-```
+- POST /api/tasks: Cria uma nova tarefa.
+- GET /api/tasks: Retorna todas as tarefas.
+- GET /api/tasks/{id}: Retorna uma tarefa específica com o ID fornecido.
+- PUT /api/tasks/{id}: Atualiza uma tarefa existente com o ID fornecido.
+- DELETE /api/tasks/{id}: Exclui uma tarefa com o ID fornecido.
+- DELETE /api/tasks/: Exclui todas as tarefas com base no parâmetro de filtro fornecido.
 
-This command will build the app into a `.jar` file in the `/target` directory.
+Certifique-se de consultar a documentação da API fornecida pelo Swagger para obter detalhes sobre cada endpoint.
 
-After building the backend app you need to set some environment variables for the all services.
-You can find an example of the environment variables in the `.env.example` file.
+## Documentação da API
 
-After setting the environment variables, you can run `docker compose` to run the other services.
+A documentação da API pode ser acessada via Swagger UI. Após iniciar o backend, abra seu navegador e acesse [http://localhost:8080/swagger-ui/](http://localhost:8080/todo/swagger-ui.html) para visualizar e interagir com a documentação.
 
-```shell
-docker compose up -d
-```
+## Funcionalidades para implementar:
 
-It will build the frontend app and run the backend and frontend services with a PostgreSQL database.
+- Spring Security
