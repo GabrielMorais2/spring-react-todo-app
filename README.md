@@ -66,6 +66,9 @@ Certifique-se de consultar a documentação da API fornecida pelo Swagger para o
 
 A documentação da API pode ser acessada via Swagger UI. Após iniciar o backend, abra seu navegador e acesse [http://localhost:8080/swagger-ui/](http://localhost:8080/todo/swagger-ui.html) para visualizar e interagir com a documentação.
 
+![image](https://github.com/GabrielMorais2/spring-react-todo-app-master/assets/68476116/c2d25887-a21b-463b-81f7-ef2849093c8e)
+
+
 ## Funcionalidades para implementar:
 
 - Spring Security
