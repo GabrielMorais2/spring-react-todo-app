@@ -1,4 +1,4 @@
-import { Task } from '../model/Task';
+import {Task} from '../model/Task';
 
 class TaskService {
     private apiUrl: string;

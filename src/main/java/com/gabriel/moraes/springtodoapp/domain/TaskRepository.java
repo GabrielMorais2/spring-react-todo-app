@@ -1,6 +1,5 @@
-package com.ahkn.springtodoapp.repository;
+package com.gabriel.moraes.springtodoapp.domain;
 
-import com.ahkn.springtodoapp.entity.Task;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

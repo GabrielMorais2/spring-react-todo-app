@@ -1,4 +1,4 @@
-package com.ahkn.springtodoapp;
+package com.gabriel.moraes.springtodoapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

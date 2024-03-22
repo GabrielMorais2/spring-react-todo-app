@@ -1,4 +1,4 @@
-import { Task } from '../../model/Task';
+import {Task} from '../../model/Task';
 import TaskCard from './TaskCard';
 
 interface TaskListProps {

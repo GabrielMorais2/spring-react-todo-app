@@ -1,9 +1,9 @@
-package com.ahkn.springtodoapp.dto;
+package com.gabriel.moraes.springtodoapp.domain.payloads;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
+import lombok.Data;
 
 @Data
 @Schema(

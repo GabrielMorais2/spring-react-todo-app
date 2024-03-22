@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Box, Input, Button, FormControl } from '@chakra-ui/react';
-import { AddIcon } from '@chakra-ui/icons';
-import { Task } from '../../model/Task';
+import React, {useState} from 'react';
+import {Box, Button, FormControl, Input} from '@chakra-ui/react';
+import {AddIcon} from '@chakra-ui/icons';
+import {Task} from '../../model/Task';
 
 interface NewTaskFormProps {
     onSave: (task: Task) => void;

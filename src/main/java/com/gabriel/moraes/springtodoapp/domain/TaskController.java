@@ -1,9 +1,8 @@
-package com.ahkn.springtodoapp.controller;
+package com.gabriel.moraes.springtodoapp.domain;
 
-import com.ahkn.springtodoapp.dto.TaskDto;
-import com.ahkn.springtodoapp.dto.TaskResponse;
-import com.ahkn.springtodoapp.service.TaskService;
-import com.ahkn.springtodoapp.utils.AppConstants;
+import com.gabriel.moraes.springtodoapp.domain.payloads.TaskDto;
+import com.gabriel.moraes.springtodoapp.domain.payloads.TaskResponse;
+import com.gabriel.moraes.springtodoapp.utils.AppConstants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
