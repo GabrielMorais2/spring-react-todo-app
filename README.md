@@ -16,7 +16,7 @@ Este é um projeto SpringTodoApp que consiste em uma aplicação web para gerenc
 
 ## Video da aplicação funcionando
 
-https://github.com/ahmethakanbesel/spring-react-todo-app/assets/6422460/27e2f6c2-31e7-4e18-b955-fc9f33b062f8
+https://github.com/GabrielMorais2/spring-react-todo-app/assets/68476116/38e78797-ff13-4fec-bf24-939f22d50ca8
 
 ## Requerimentos
 
@@ -32,13 +32,13 @@ Para instalar a aplicação, siga esses passos:
 - Clone o repositorio do GitHub:
 
 ```shel
-  git clone https://github.com/GabrielMorais2/spring-react-todo-app-master
+  git clone https://github.com/GabrielMorais2/spring-react-todo-app.git
 ```
 
 - Navegue até o diretorio da aplicação:
 
 ```shel
-  cd spring-react-todo-app-master
+  cd spring-react-todo-app
 ```
 
 - Execute o docker compose para instalar iniciar a aplicação:
