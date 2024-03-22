@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  postgres-todo:
+    image: postgres:16-alpine
+    container_name: postgres-todo
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: db_todo
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - spring-postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready", "-d", "db_prod" ]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres-todo:
+        condition: service_healthy
+    environment:
+      - POSTGRES_HOST=postgres-todo
+    networks:
+        - react-spring
+        - spring-postgres
+    restart: always
+
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    networks:
+      - react-spring
+    depends_on:
+      - backend
+    environment:
+      VITE_API_URL: http://localhost:8080
+    expose:
+      - 80
+
+volumes:
+  postgres-data: {}
+
+networks:
+  react-spring:
+    driver: bridge
+  spring-postgres:
+    driver: bridge

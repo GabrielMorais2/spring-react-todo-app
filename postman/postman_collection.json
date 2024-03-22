@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "ac9f2276-e2aa-4790-9c17-1ff55ee61292",
+		"name": "Spring Boot TODO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1369140"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "tasks",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get a task by id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tasks/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tasks",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retrieves a task by id"
+									},
+									"response": [
+										{
+											"name": "200 SUCCESS",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/tasks/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tasks",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"description\": \"<string>\",\n  \"id\": \"<long>\",\n  \"completed\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update a task",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"id\": \"<long>\",\n  \"completed\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/tasks/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tasks",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Updates a task with the given details"
+									},
+									"response": [
+										{
+											"name": "200 SUCCESS",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"description\": \"<string>\",\n  \"id\": \"<long>\",\n  \"completed\": \"<boolean>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/tasks/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tasks",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"description\": \"<string>\",\n  \"id\": \"<long>\",\n  \"completed\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete a task",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tasks/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tasks",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Deletes the corresponding task"
+									},
+									"response": [
+										{
+											"name": "200 SUCCESS",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/tasks/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tasks",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "List all tasks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/tasks?completed=<string>&pageNo=0&pageSize=10&sortBy=id&sortDir=asc",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "completed",
+											"value": "<string>"
+										},
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "sortBy",
+											"value": "id"
+										},
+										{
+											"key": "sortDir",
+											"value": "asc"
+										}
+									]
+								},
+								"description": "Retrieves all tasks"
+							},
+							"response": [
+								{
+									"name": "200 SUCCESS",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tasks?completed=<string>&pageNo=0&pageSize=10&sortBy=id&sortDir=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tasks"
+											],
+											"query": [
+												{
+													"key": "completed",
+													"value": "<string>"
+												},
+												{
+													"key": "pageNo",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												},
+												{
+													"key": "sortBy",
+													"value": "id"
+												},
+												{
+													"key": "sortDir",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": [\n    {\n      \"description\": \"<string>\",\n      \"id\": \"<long>\",\n      \"completed\": \"<boolean>\"\n    },\n    {\n      \"description\": \"<string>\",\n      \"id\": \"<long>\",\n      \"completed\": \"<boolean>\"\n    }\n  ],\n  \"pageNo\": \"<integer>\",\n  \"pageSize\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"totalPages\": \"<integer>\",\n  \"last\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create a task",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\": \"task\",\n  \"completed\": false\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tasks"
+									]
+								},
+								"description": "Creates a task with the given details"
+							},
+							"response": [
+								{
+									"name": "201 CREATED",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"id\": \"<long>\",\n  \"completed\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/tasks",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tasks"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"description\": \"<string>\",\n  \"id\": \"<long>\",\n  \"completed\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete tasks",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/tasks/?completed=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										""
+									],
+									"query": [
+										{
+											"key": "completed",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Batch delete tasks with the given status"
+							},
+							"response": [
+								{
+									"name": "200 SUCCESS",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tasks/?completed=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tasks",
+												""
+											],
+											"query": [
+												{
+													"key": "completed",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
