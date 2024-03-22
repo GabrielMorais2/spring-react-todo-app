@@ -1,9 +1,7 @@
-package com.ahkn.springtodoapp.service;
+package com.gabriel.moraes.springtodoapp.domain;
 
-import com.ahkn.springtodoapp.dto.TaskDto;
-import com.ahkn.springtodoapp.dto.TaskResponse;
-
-import java.util.List;
+import com.gabriel.moraes.springtodoapp.domain.payloads.TaskDto;
+import com.gabriel.moraes.springtodoapp.domain.payloads.TaskResponse;
 
 public interface TaskService {
     TaskDto createTask(TaskDto taskDto);

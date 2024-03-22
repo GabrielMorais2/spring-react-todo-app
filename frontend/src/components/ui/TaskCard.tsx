@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { Card, CardBody, Text, IconButton, Flex, HStack, Input } from '@chakra-ui/react';
-import { EditIcon, DeleteIcon, CheckIcon, LockIcon } from '@chakra-ui/icons';
-import { Task } from '../../model/Task';
+import {useState} from 'react';
+import {Card, CardBody, Flex, HStack, IconButton, Input, Text} from '@chakra-ui/react';
+import {CheckIcon, DeleteIcon, EditIcon, LockIcon} from '@chakra-ui/icons';
+import {Task} from '../../model/Task';
 
 interface TaskCardProps {
     onUpdate: (task: Task) => void;

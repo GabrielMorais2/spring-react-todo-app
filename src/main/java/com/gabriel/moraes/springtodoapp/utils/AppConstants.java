@@ -1,4 +1,4 @@
-package com.ahkn.springtodoapp.utils;
+package com.gabriel.moraes.springtodoapp.utils;
 
 public class AppConstants {
     public static final String DEFAULT_PAGE_NUMBER = "0";

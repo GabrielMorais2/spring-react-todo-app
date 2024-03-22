@@ -1,4 +1,4 @@
-package com.ahkn.springtodoapp.dto;
+package com.gabriel.moraes.springtodoapp.domain.payloads;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

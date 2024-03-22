@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Container, StackDivider, VStack, Box, Text, HStack, Button } from '@chakra-ui/react'
-import { DeleteIcon } from '@chakra-ui/icons'
+import {useEffect, useState} from 'react';
+import {Box, Button, Container, HStack, StackDivider, Text, VStack} from '@chakra-ui/react'
+import {DeleteIcon} from '@chakra-ui/icons'
 import NewTaskForm from './components/forms/NewTaskForm'
 import TaskList from './components/ui/TaskList'
-import { Task } from './model/Task';
+import {Task} from './model/Task';
 
 const App = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
