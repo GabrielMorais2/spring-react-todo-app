@@ -43,7 +43,7 @@ const App = () => {
   // Load tasks from the API when the component mounts (on page load)
   useEffect(() => {
     fetchTasks();
-  }); // The empty dependency array ensures this effect runs once on component mount
+  }, []); // The empty dependency array ensures this effect runs once on component mount
 
   const filteredTasks = filter === 'all'
     ? tasks
